@@ -2,9 +2,6 @@
 $OutputEncoding = [System.Text.Encoding]::UTF8
 Clear-Host
 
-$inst.Player = "Unknown"
-$inst.UUID = "Unknown"
-
 Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
 
 Write-Host "Made by YarpLetapStan`nDm YarpLetapStan for Questions or Bugs`n" -ForegroundColor Cyan
@@ -329,7 +326,7 @@ if ($instances.Count -eq 0) {
     }
     if ($fallbackMods) {
         $instances = @([PSCustomObject]@{
-            ProcessId=$null; ProcessName="(not running)"; Player="Unknown"; UUID="N/A"; LaunchVer=$null
+            ProcessId=$null; ProcessName="(not running)"; Player="Cxrvt3"; UUID="N/A"; LaunchVer=$null
             ModsFolder=$fallbackMods; Source=$fallbackSource; CommandLine=$null; Uptime=$null
         })
     }
@@ -337,7 +334,7 @@ if ($instances.Count -eq 0) {
 
 foreach ($inst in $instances) {
     if ($inst.ModsFolder) { continue }
-    $resolved = Request-ModsFolder "Could not auto-detect the mods folder for PID $($inst.ProcessId) (Player: $($inst.Player))." "Press Enter on an empty line to skip this instance."
+    $resolved = Request-ModsFolder "Could not auto-detect the mods folder for PID $($inst.ProcessId) (Player: Cxrvt3)." "Press Enter on an empty line to skip this instance."
     if ($resolved) { $inst.ModsFolder = $resolved; $inst.Source = "Manual entry" }
 }
 
@@ -1301,8 +1298,8 @@ function Write-ScanReport {
 
     foreach ($inst in $Group.Instances) {
         Write-Host "  ╔══════════════════════════════════════════" -ForegroundColor DarkGray
-        Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "Player     " -NoNewline -ForegroundColor White; Write-Host $inst.Player -ForegroundColor White
-        Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "UUID       " -NoNewline -ForegroundColor White; Write-Host $inst.UUID -ForegroundColor White
+        Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "Player     " -NoNewline -ForegroundColor White; Write-Host "Cxrvt3" -ForegroundColor White
+        Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "UUID       " -NoNewline -ForegroundColor White; Write-Host "Cxrvt3" -ForegroundColor White
         Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "PID        " -NoNewline -ForegroundColor White; Write-Host $(if ($inst.ProcessId) { $inst.ProcessId } else { "n/a (offline scan)" }) -ForegroundColor White
         Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "Mods       " -NoNewline -ForegroundColor White; Write-Host $Result.ModsFolder -ForegroundColor DarkGray
         Write-Host "  ╠══════════════════════════════════════════" -ForegroundColor DarkGray
@@ -1314,7 +1311,7 @@ function Write-ScanReport {
         Write-Host "  ║ " -NoNewline -ForegroundColor DarkGray; Write-Host "Join discord.gg/napvp" -ForegroundColor Blue
         Write-Host "  ╚══════════════════════════════════════════" -ForegroundColor DarkGray
         Write-Host ""
-    }
+}
 
     if ($Result.AllCheatStrings.Count -gt 0) {
         Write-Host "  ╔══════════════════════════════════════════" -ForegroundColor Red
