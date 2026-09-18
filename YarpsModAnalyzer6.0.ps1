@@ -2,6 +2,9 @@
 $OutputEncoding = [System.Text.Encoding]::UTF8
 Clear-Host
 
+$inst.Player = "Unknown"
+$inst.UUID = "Unknown"
+
 Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
 
 Write-Host "Made by YarpLetapStan`nDm YarpLetapStan for Questions or Bugs`n" -ForegroundColor Cyan
