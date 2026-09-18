@@ -748,23 +748,7 @@ function Invoke-BulkHashLookup($jarFiles) {
 
 $cheatStrings = @(
     "isObsidianOrBedrock","isValidCrystalPosition","processAnchorPvP","isValidAnchorPosition","speedPotSlot","strengthPotSlot","preventSwordBlockBreaking","preventSwordBlockAttack",
-    "Sw1tch","D3l4y","M1n","Pl4ce","T0t3m","Sl0t","Expl0de","Aut0",
-    "Cry5t4l","C11ckGu1","obsPos","crystalslot","findKnockbackSword","attackRegisteredThisClick","freecam","pushOutOfBlocks",
-    "onPushOutOfBlocks","MAX_ESPERA_TICKS","posCristal","modifyDecrementAmount","preventSwordFromBlockAttack","preventSwordFromBlockBreaking","shouldBlockBlockHit","lwfh",
-    "Donut","setBlockBreakingCooldown","getBlockBreakingCooldown","setItemUseCooldown","onBlockBreaking","invokeDoAttack","invokeDoItemUse","setSelectedSlot",
-    "getSelectedSlot","swapBackToOriginalSlot","blockBreakingCooldown","invokeOnMouseButton","onSwapLastAttackedTicksReset","getVisualAttackCooldownProgressPerTick","getHandSwingDuration","onBeginRenderTick",
-    "PlayerMoveC2SPacketAccessor","redirectSelectedSlot","hookCancelBlockBreaking","EndCrystalItemMixin","arrayOfString","lvstrng","dqrkis","StringObfuscator",
-    "POT_CHEATS","onShouldRenderBlockOutline","predictCrystals","noOffhandTotem","getNearByCrystals","slotExplode","needToPlaceRails","findTotemSlot",
-    "activateOnRightClick","crystalPlaceClock","isDeadBodyNearby","CrystalTwiceClock","mainHandStack","attackInAir","attackOnJump","onDestruct",
-    "getGlowstoneChance","isAutoCharge","getPlaceChance","getSwitchDelay","getGlowstoneDelay","getExplodeDelay","getExplodeSlotIndex","getPlaceDelayTicks",
-    "getBreakDelayTicks","getBreakChance","isSpawnersEnabled","isShulkersEnabled","onModuleDisabled","switchToBestTool","switchToBestWeapon","isLootProtect",
-    "getMinHunger","isTracersEnabled","getSelectedBlocks","isChestsEnabled","4ctivat K3y","D4m4ge T1ck","Sw1tch D3lay","Ch4rg3 D3l4y",
-    "inventoryToMenuSlot","throwPearl","isLeftHoldOnly","Automatically switches to sword when hitting with totem","Failed to switch to mace after axe!","Breaking shield with axe...","TrilliumSolutions","CwskKkUfHQYB",
-    "HgsCDQ49KkUfHQYB","DhsnbQ0LDg0MDA","OhYHBQcOHw","EgQKDiUqRR8WChk","KjoFWRcEAx0M","Hx0GAVkcChwdDA","HSw7RQQIAQQ","BR0sFBcOGg4a",
-    "Oh0yWR0MCA","pedroisgay","krloader","K3yAHC","Aut0 H1t Cryst4l M4cr0","D0ubl3 4nch0r","Aut0H1tCyst4l","Pr3Ch3ck",
-    "Expl0d3 D3l4y","T0t3m Sl0t","Ch4rge D3l4y","M1ss Ch4nce","Expl0de Sl0t","Expl0d3 Sl0t","N0 Dglwst0ne","Clk Sim",
-    "P34rl C4tch3r","4ctiv4tK3y","d4m4geT1ck","sw1tchD3lay","ch4rg3D3l4y","expl0d3D3l4y","t0t3mSl0t","simulateClicks",
-    "Aut0 XP","Thr0w3 XP f4st","W1nd Ch4rg3","P34rl","4c7 K3y"
+    "Sw1tch","D3l4y","M1n","Pl4ce","T0t3m","Sl0t","Expl0de","Aut0"
 )
 
 $cheatStringSet = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
@@ -773,7 +757,7 @@ foreach ($s in $cheatStrings) { [void]$cheatStringSet.Add($s) }
 $strongNames = @(
     "CrystalMacro","AutoCrystalPlaceClock",
     "DontPlaceCrystal","DontBreakCrystal","CanPlaceCrystalServer","KanPlaceKrystalServer",
-    "EsperandoCristal","BuscarCristal",
+    "EsperandoCristal","BuscarCristal"
 )
 
 $strongNeedleMap = @{}
